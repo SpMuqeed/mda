@@ -1,0 +1,294 @@
+<odoo>
+    <data>
+        <template id="homepage_template" name="Homepage">
+            <t t-call="website.layout">
+                <t t-jquery="head" t-operation="append">
+                    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+                          rel="stylesheet"/>
+                </t>
+                <xpath expr="//main" position="before">
+                    <style>
+                        body {
+                        font-family: Arial, sans-serif;
+                        margin: 0;
+                        padding: 0;
+                        background-color: white;
+                        }
+                        .about-mda-section {
+                        background-color: #D3D3D3; /* Light gray background */
+                        }
+                        .about-title {
+                        font-size: 1.8rem;
+                        font-weight: bold;
+                        color: #333;
+                        }
+                        .about-title .highlight {
+                        color: #0056b3; /* Blue color for emphasis */
+                        }
+                        .about-text {
+                        font-size: 1rem;
+                        color: #555;
+                        line-height: 1.6;
+                        margin-bottom: 1rem;
+                        }
+                        .read-more {
+                        display: inline-block;
+                        font-size: 1rem;
+                        font-weight: bold;
+                        color: #0056b3;
+                        text-decoration: none;
+                        border-bottom: 2px solid #0056b3;
+                        transition: color 0.3s, border-color 0.3s;
+                        }
+                        .read-more:hover {
+                        color: #003d80;
+                        border-color: #003d80;
+                        }
+                        .services-section {
+                        background-color:white;
+                        color: #ffffff; /* White text */
+                        }
+                        .service-card {
+                        background-color: #034673;
+                        padding: 20px;
+                        border: 1px solid #004080;
+                        border-radius: 10px;
+                        margin: 10px 0;
+                        transition: transform 0.3s, box-shadow 0.3s;
+                        }
+                        .service-card:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                        }
+                        .service-icon {
+                        font-size: 3rem;
+                        color: #ffffff;
+                        margin-bottom: 15px;
+                        }
+                        .service-title {
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                        }
+                        .service-description {
+                        font-size: 0.9rem;
+                        line-height: 1.6;
+                        }
+                        .service-card i {
+                        display: inline-block;
+                        margin-bottom: 10px;
+                        }
+                        .stats-section {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 40px; /* Space between cards */
+                        padding: 50px 20px;
+                        background-color: #D3D3D3; /* Light grey background */
+                        }
+                        .stat-card {
+                        text-align: center;
+                        width:250px;
+                        padding-top:20px;
+                        padding-bottom:20px;
+                        color: #b3b3b3; /* Light grey color for text */
+                        }
+                        .stat-card:hover {
+                        background-color:#034673;
+                        color:white;
+                        }
+                        .stat-card .icon {
+                        font-size: 50px; /* Large icon size */
+                        color: #00bcd4; /* Primary color for icons */
+                        margin-bottom: 15px;
+                        }
+                        .stat-number {
+                        font-size: 36px;
+                        font-weight: bold;
+                        }
+                        .stat-label {
+                        font-size: 18px;
+                        text-transform: lowercase;
+                        letter-spacing: 1px;
+                        font-weight: bold;
+                        }
+
+
+                    </style>
+                </xpath>
+                <div class="">
+                    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Indicators -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"/>
+                            <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1"
+                                    aria-label="Slide 2"/>
+                            <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="2"
+                                    aria-label="Slide 3"/>
+                        </div>
+
+                        <!-- Carousel Inner -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://www.mda.services/wp-content/uploads/2017/08/ban2.jpg"
+                                     style="height:400px;" class="d-block w-100" alt="Image 1"/>
+                                <div class="carousel-caption d-none d-md-block">
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://www.mda.services/wp-content/uploads/2017/08/bg1.jpg"
+                                     style="height:400px;" class="d-block w-100" alt="Image 2"/>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Image 2</h5>
+                                    <p>Description for image 2.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://www.mda.services/wp-content/uploads/2017/08/bg1.jpg"
+                                     style="height:400px;" class="d-block w-100" alt="Image 3"/>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Image 3</h5>
+                                    <p>Description for image 3.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel"
+                                data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"/>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel"
+                                data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"/>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <section class="about-mda-section py-5">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <!-- Image Section -->
+                            <div class="col-md-6">
+                                <img src="data:image/jpeg;base64,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"
+                                     alt="About MDA" class="img-fluid rounded" style="width:600px"/>
+                            </div>
+                            <!-- Text Section -->
+                            <div class="col-md-6">
+                                <h2 class="about-title">ABOUT
+                                    <span class="highlight">MDA</span>
+                                </h2>
+                                <p class="about-text">
+                                    Modern Digital Applications is a company that wants to help you redefine your
+                                    digital presence. Whether you are an individual, a business or a government agency,
+                                    MDA offers the strategy and tools you need to deliver your clients a superior
+                                    lifestyle, a more competitive business, and ready-to-deliver government services.
+                                </p>
+                                <p class="about-text">
+                                    Living in the era of digital communications means combining the tools of information
+                                    technology with current online channels of communications – empowering you to become
+                                    stronger, faster, and more competitive. In short, to get ahead of your game.
+                                </p>
+                                <a href="#" class="read-more" style="text-decoration:none;">READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="services-section py-5">
+                    <div class="container">
+                        <div class="row text-center">
+                            <!-- Brand Identity -->
+                            <div class="col-md-3">
+                                <div class="service-card">
+                                    <div class="service-icon">
+                                        <i class="fa fa-anchor"></i>
+                                    </div>
+                                    <h3 class="service-title">BRAND IDENTITY</h3>
+                                    <p class="service-description">
+                                        We’ll help you adapt your brand identity for the digital world -- helping you
+                                        improve your logo and the story behind it.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Web Development -->
+                            <div class="col-md-3">
+                                <div class="service-card">
+                                    <div class="service-icon">
+                                        <i class="fa fa-desktop"></i>
+                                    </div>
+                                    <h3 class="service-title">WEB DEVELOPMENT</h3>
+                                    <p class="service-description">
+                                        We develop websites from scratch -- tailored to fit our client's needs,
+                                        including content and multi-language if needed.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Mobile Applications -->
+                            <div class="col-md-3">
+                                <div class="service-card">
+                                    <div class="service-icon">
+                                        <i class="fa fa-mobile-alt"></i>
+                                    </div>
+                                    <h3 class="service-title">MOBILE APPLICATIONS</h3>
+                                    <p class="service-description">
+                                        We enrich your digital experience with powerful iPhone and Android applications
+                                        to maximize your sales – putting you just a fingertip away.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Online Marketing -->
+                            <div class="col-md-3">
+                                <div class="service-card">
+                                    <div class="service-icon">
+                                        <i class="fa fa-play"></i>
+                                    </div>
+                                    <h3 class="service-title">ONLINE MARKETING</h3>
+                                    <p class="service-description">
+                                        We will make more customers fall for you with our well-planned and strategized
+                                        online marketing solutions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="stats-section">
+                    <div class="stat-card">
+                        <div class="icon">
+                            <i class="fa-solid fa-folder-open"></i>
+                        </div>
+                        <div class="stat-number">358</div>
+                        <div class="stat-label">projects completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <div class="stat-number">269</div>
+                        <div class="stat-label">concept created</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="stat-number">157</div>
+                        <div class="stat-label">happy clients</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <div class="stat-number">23</div>
+                        <div class="stat-label">awards winning</div>
+                    </div>
+                </section>
+
+            </t>
+        </template>
+    </data>
+</odoo>

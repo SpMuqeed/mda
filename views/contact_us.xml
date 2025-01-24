@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="contact_us_template" name="Contact Us">
+        <t t-call="website.layout">
+            <xpath>
+                <style>
+                    .form-container {
+                    max-width: 800px;
+                    margin: auto;
+                    padding: 2rem;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    background-color: #f9f9f9;
+                    }
+                    .form-group {
+                    display:flex;
+                    flex-direction:row;
+                    padding:5px;
+                    }
+                    .form-group label {
+                    font-weight: bold;
+
+                    width:300px;
+                    }
+                </style>
+            </xpath>
+            <div>
+                <h2 style="background-color:#034673;color:white;height:150px;display:flex;align-items:center;padding-left:75px ">
+                    Contact Us
+                </h2>
+            </div>
+
+            <div class="form-container m-5">
+                <h2 class="mb-4">Contact Us</h2>
+                <form action="/contactus/submit" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="csrf_token" value="your_csrf_token_here"/>
+                    <div class="form-group">
+                        <label for="name">Company Name</label>
+                        <input type="text" name="name" id="name" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact_name">Contact Name</label>
+                        <input type="text" name="contact_name" id="contact_name" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone_number">Phone Number</label>
+                        <input type="text" name="phone_number" id="phone_number" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="dropdown_selection">Circle</label>
+                        <select name="Circle" id="Circle" class="form-control">
+                            <option value="">Select Circle</option>
+                            <option value="option_1">Circle 1</option>
+                            <option value="option_2">Circle 2</option>
+                            <option value="option_3">Circle 3</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea name="description" id="description" class="form-control" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="file">Upload File</label>
+                        <input type="file" name="file" id="file" class="form-control-file"/>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-4">Submit</button>
+                </form>            </div>
+        </t>
+    </template>
+
+    <template id="contact_us_success" name="Contact Us Success">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Thank you!</h1>
+                <p>Your details have been successfully submitted.</p>
+            </div>
+        </t>
+    </template>
+
+    <template id="contact_us_failure" name="Contact Us Failure">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Oops! Something went wrong.</h1>
+                <p>
+                    <t t-esc="error"/>
+                </p>
+            </div>
+        </t>
+    </template>
+</odoo>
