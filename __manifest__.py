@@ -16,8 +16,12 @@ Long description of module's purpose
     'depends': ['base'],
 
     'data': [
+        'security/ir.model.access.csv',
+        'views/view.xml',
         'views/home_template.xml',
         'views/contact_us.xml',
+
+
     ],
 
 }

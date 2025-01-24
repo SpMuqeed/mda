@@ -1,0 +1,52 @@
+<odoo>
+    <menuitem id="mda_main_menu" name="MDA" />
+
+    <record id="view_application_form_list" model="ir.ui.view">
+        <field name="name">application.form.list</field>
+        <field name="model">application.form</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="contact_name"/>
+                <field name="email"/>
+                <field name="phone_number"/>
+                <field name="Circle"/>
+                <field name="file_name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_application_form_form" model="ir.ui.view">
+        <field name="name">application.form.form</field>
+        <field name="model">application.form</field>
+        <field name="arch" type="xml">
+            <form string="Application Form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="contact_name"/>
+                        <field name="email"/>
+                        <field name="phone_number"/>
+                        <field name="Circle"/>
+                    </group>
+                    <group>
+                        <field name="description"/>
+                        <field name="file_upload" filename="file_name"/>
+                        <field name="file_name" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_application_form" model="ir.actions.act_window">
+        <field name="name">Application Forms</field>
+        <field name="res_model">application.form</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_application_form_main" name="Application Forms" parent="mda_main_menu" sequence="10" action="action_application_form"/>
+
+
+</odoo>
+
