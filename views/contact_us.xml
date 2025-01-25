@@ -4,14 +4,7 @@
         <t t-call="website.layout">
             <xpath>
                 <style>
-                    .form-container {
-                    max-width: 800px;
-                    margin: auto;
-                    padding: 2rem;
-                    border-radius: 10px;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                    background-color: #f9f9f9;
-                    }
+
                     .form-group {
                     display:flex;
                     flex-direction:row;
@@ -22,6 +15,90 @@
 
                     width:300px;
                     }
+                    .form-container {
+
+                    padding:20px;
+                    max-width: 100%;
+                    width: 100%;
+                    max-width: 480px; /* Limit the width for smaller screens */
+                    background-color: #ffffff;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    }
+
+                    /* General spacing and font adjustments */
+                    .form-label {
+                    font-size: 14px;
+                    }
+
+                    .form-control,
+                    .form-select,
+                    textarea {
+                    font-size: 14px;
+                    }
+
+                    /* Responsive adjustments */
+                    @media (max-width: 768px) {
+                    .form-group {
+                    flex-direction: column; /* Stack label and input vertically */
+                    padding: 10px; /* Increase padding for better spacing */
+                    }
+
+                    .form-group label {
+                    width: 100%; /* Make the label span the full width */
+                    margin-bottom: 5px; /* Add spacing between the label and input */
+                    text-align: left; /* Align text to the left for consistency */
+                    }
+
+                    .form-group input,
+                    .form-group select,
+                    .form-group textarea {
+                    width: 100%; /* Ensure inputs stretch to full width */
+                    box-sizing: border-box; /* Include padding in the element's width */
+                    }
+                    .form-container {
+                    margin-bottom: 20px;
+                    margin-top: 20px;
+
+                    }
+
+                    .btn {
+                    width: 100%;
+                    }
+                    }
+
+                    @media (max-width: 576px) {
+                    .form-container {
+                    padding: 15px;
+                    }
+
+                    .form-label {
+                    font-size: 13px;
+                    }
+
+                    .form-control {
+                    font-size: 13px;
+                    }
+
+                    textarea {
+                    font-size: 13px;
+                    }
+
+                    .btn {
+                    font-size: 14px;
+                    }
+                    }
+
+                    /* Ensure proper spacing for form elements */
+                    .mb-3 {
+                    margin-bottom: 1rem !important;
+                    }
+
+                    /* Adjust button size */
+                    .btn {
+                    border-radius: 5px;
+                    font-size: 16px;
+                    }
                 </style>
             </xpath>
             <div>
@@ -30,7 +107,7 @@
                 </h2>
             </div>
 
-            <div class="form-container m-5">
+            <div class="form-container ">
                 <h2 class="mb-4">Contact Us</h2>
                 <form action="/contactus/submit" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="csrf_token" value="your_csrf_token_here"/>
@@ -68,7 +145,8 @@
                         <input type="file" name="file" id="file" class="form-control-file"/>
                     </div>
                     <button type="submit" class="btn btn-primary mt-4">Submit</button>
-                </form>            </div>
+                </form>
+            </div>
         </t>
     </template>
 

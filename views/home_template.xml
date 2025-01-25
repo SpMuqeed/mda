@@ -113,9 +113,75 @@
                         font-weight: bold;
                         }
 
+                        .carousel-image {
+                        height: 400px;
+                        object-fit: cover;
+                        }
 
+                        /* Adjust height for tablets */
+                        @media (max-width: 768px) {
+                        .carousel-image {
+                        height: 300px;
+                        }
+                        }
+
+                        /* Adjust height for mobile phones */
+                        @media (max-width: 576px) {
+                        .carousel-image {
+                        height: 200px;
+                        }
+                        }
+
+                        /* Center indicators and controls for smaller screens */
+                        @media (max-width: 768px) {
+                        .carousel-indicators button {
+                        width: 12px;
+                        height: 12px;
+                        }
+                        }
+                          .stats-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+        justify-content: center;
+        padding: 2rem;
+        background-color: #f9f9f9;
+    }
+
+    .stat-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #fff;
+
+
+        padding: 1.5rem;
+        width: calc(25% - 1rem); /* Four cards in a row on large screens */
+        min-width: 150px;
+        max-width: 250px;
+    }
+
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .stat-card {
+            width: calc(50% - 1rem); /* Two cards per row on tablets */
+        }
+    }
+
+    @media (max-width: 576px) {
+        .stats-section {
+            flex-direction: column;
+        }
+        .stat-card {
+            width: 100%; /* Full width for each card on mobile */
+            max-width: 400px;
+        }
+    }
                     </style>
                 </xpath>
+
                 <div class="">
                     <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
                         <!-- Indicators -->
@@ -132,14 +198,11 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="https://www.mda.services/wp-content/uploads/2017/08/ban2.jpg"
-                                     style="height:400px;" class="d-block w-100" alt="Image 1"/>
-                                <div class="carousel-caption d-none d-md-block">
-
-                                </div>
+                                     class="d-block w-100 carousel-image" alt="Image 1"/>
                             </div>
                             <div class="carousel-item">
                                 <img src="https://www.mda.services/wp-content/uploads/2017/08/bg1.jpg"
-                                     style="height:400px;" class="d-block w-100" alt="Image 2"/>
+                                     class="d-block w-100 carousel-image" alt="Image 2"/>
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>Image 2</h5>
                                     <p>Description for image 2.</p>
@@ -147,7 +210,7 @@
                             </div>
                             <div class="carousel-item">
                                 <img src="https://www.mda.services/wp-content/uploads/2017/08/bg1.jpg"
-                                     style="height:400px;" class="d-block w-100" alt="Image 3"/>
+                                     class="d-block w-100 carousel-image" alt="Image 3"/>
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>Image 3</h5>
                                     <p>Description for image 3.</p>
@@ -168,6 +231,7 @@
                         </button>
                     </div>
                 </div>
+
                 <section class="about-mda-section py-5">
                     <div class="container">
                         <div class="row align-items-center">
