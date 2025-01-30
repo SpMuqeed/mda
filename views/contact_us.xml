@@ -4,6 +4,10 @@
         <t t-call="website.layout">
             <xpath expr="//html" position="attributes">
                 <style>
+
+                    .navbar-nav .nav-link:hover {
+                    color: #034673 !important;
+                    }
                     /* Ensure full RTL layout for Arabic */
                     .o_rtl {
                     direction: rtl !important;
@@ -21,99 +25,192 @@
                     direction: ltr !important;
                     text-align: left;
                     }
-                    .form-group {
-                    display:flex;
-                    flex-direction:row;
-                    padding:5px;
-                    }
-                    .form-group label {
-                    font-weight: bold;
-                    width:300px;
-                    }
-                    .form-container {
+<!--                    .form-group {-->
+<!--                    display:flex;-->
+<!--                    flex-direction:row;-->
+<!--                    padding:5px;-->
+<!--                    }-->
+<!--                    .form-group label {-->
+<!--                    font-weight: bold;-->
+<!--                    width:300px;-->
+<!--                    }-->
+<!--                    .form-container {-->
+<!--                    align-item:center;-->
+<!--                    margin:20px;-->
+<!--                    padding:20px;-->
+<!--                    max-width: 100%;-->
+<!--                    width: 100%;-->
+<!--                    max-width: 480px; /* Limit the width for smaller screens */-->
+<!--                    background-color: #ffffff;-->
+<!--                    border-radius: 10px;-->
+<!--                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);-->
+<!--                    }-->
 
-                    padding:20px;
-                    max-width: 100%;
-                    width: 100%;
-                    max-width: 480px; /* Limit the width for smaller screens */
-                    background-color: #ffffff;
-                    border-radius: 10px;
-                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                    }
+<!--                    /* General spacing and font adjustments */-->
+<!--                    .form-label {-->
+<!--                    font-size: 14px;-->
+<!--                    }-->
 
-                    /* General spacing and font adjustments */
-                    .form-label {
-                    font-size: 14px;
-                    }
+<!--                    .form-control,-->
+<!--                    .form-select,-->
+<!--                    textarea {-->
+<!--                    font-size: 14px;-->
+<!--                    }-->
 
-                    .form-control,
-                    .form-select,
-                    textarea {
-                    font-size: 14px;
-                    }
+<!--                    /* Responsive adjustments */-->
+<!--                    @media (max-width: 768px) {-->
+<!--                    .form-group {-->
+<!--                    flex-direction: column; /* Stack label and input vertically */-->
+<!--                    padding: 10px; /* Increase padding for better spacing */-->
+<!--                    }-->
 
-                    /* Responsive adjustments */
-                    @media (max-width: 768px) {
-                    .form-group {
-                    flex-direction: column; /* Stack label and input vertically */
-                    padding: 10px; /* Increase padding for better spacing */
-                    }
+<!--                    .form-group label {-->
+<!--                    width: 100%; /* Make the label span the full width */-->
+<!--                    margin-bottom: 5px; /* Add spacing between the label and input */-->
+<!--                    text-align: left; /* Align text to the left for consistency */-->
+<!--                    }-->
 
-                    .form-group label {
-                    width: 100%; /* Make the label span the full width */
-                    margin-bottom: 5px; /* Add spacing between the label and input */
-                    text-align: left; /* Align text to the left for consistency */
-                    }
+<!--                    .form-group input,-->
+<!--                    .form-group select,-->
+<!--                    .form-group textarea {-->
+<!--                    width: 100%; /* Ensure inputs stretch to full width */-->
+<!--                    box-sizing: border-box; /* Include padding in the element's width */-->
+<!--                    }-->
+<!--                    .form-container {-->
+<!--                    margin-bottom: 20px;-->
+<!--                    margin-top: 20px;-->
 
-                    .form-group input,
-                    .form-group select,
-                    .form-group textarea {
-                    width: 100%; /* Ensure inputs stretch to full width */
-                    box-sizing: border-box; /* Include padding in the element's width */
-                    }
-                    .form-container {
-                    margin-bottom: 20px;
-                    margin-top: 20px;
+<!--                    }-->
 
-                    }
+<!--                    .btn {-->
+<!--                    width: 100%;-->
+<!--                    }-->
+<!--                    }-->
 
-                    .btn {
-                    width: 100%;
-                    }
-                    }
+<!--                    @media (max-width: 576px) {-->
+<!--                    .form-container {-->
+<!--                    padding: 15px;-->
+<!--                    }-->
 
-                    @media (max-width: 576px) {
-                    .form-container {
-                    padding: 15px;
-                    }
+<!--                    .form-label {-->
+<!--                    font-size: 13px;-->
+<!--                    }-->
 
-                    .form-label {
-                    font-size: 13px;
-                    }
+<!--                    .form-control {-->
+<!--                    font-size: 13px;-->
+<!--                    }-->
 
-                    .form-control {
-                    font-size: 13px;
-                    }
+<!--                    textarea {-->
+<!--                    font-size: 13px;-->
+<!--                    }-->
 
-                    textarea {
-                    font-size: 13px;
-                    }
+<!--                    .btn {-->
+<!--                    font-size: 14px;-->
+<!--                    }-->
+<!--                    }-->
 
-                    .btn {
-                    font-size: 14px;
-                    }
-                    }
+<!--                    /* Ensure proper spacing for form elements */-->
+<!--                    .mb-3 {-->
+<!--                    margin-bottom: 1rem !important;-->
+<!--                    }-->
 
-                    /* Ensure proper spacing for form elements */
-                    .mb-3 {
-                    margin-bottom: 1rem !important;
-                    }
+<!--                    /* Adjust button size */-->
+<!--                    .btn {-->
+<!--                    border-radius: 5px;-->
+<!--                    font-size: 16px;-->
+<!--                    }-->
+                    /* Container styling */
+.form-container {
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
 
-                    /* Adjust button size */
-                    .btn {
-                    border-radius: 5px;
-                    font-size: 16px;
-                    }
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.form-control,
+.form-control-file,
+.form-control select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+.form-control:focus,
+.form-control-file:focus,
+.form-control select:focus {
+    border-color: black;
+    box-shadow: 0px 0px 0px rgba(0, 123, 255, 0.5);
+}
+
+/* Description textarea */
+textarea.form-control {
+    resize: none;
+}
+
+/* Button styling */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #004080;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #003366;
+}
+
+/* Additional styling for file input */
+.form-control-file {
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Adjust spacing between fields */
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
+}
+
                 </style>
                 <attribute name="dir">
                     <t t-if="request.env.user.lang and request.env.user.lang.startswith('ar')">rtl</t>
@@ -132,24 +229,24 @@
                 <form action="/contactus/submit" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="csrf_token" value="your_csrf_token_here"/>
                     <div class="form-group">
-                        <label for="name">Company Name</label>
-                        <input type="text" name="name" id="name" class="form-control" required="true"/>
+
+                        <input type="text" name="name" id="name" class="form-control" required="true" placeholder="Company Name"/>
                     </div>
                     <div class="form-group">
-                        <label for="contact_name">Contact Name</label>
-                        <input type="text" name="contact_name" id="contact_name" class="form-control" required="true"/>
+
+                        <input type="text" name="contact_name" id="contact_name" class="form-control" required="true" placeholder="Contact Name"/>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" class="form-control" required="true"/>
+
+                        <input type="email" name="email" id="email" class="form-control" required="true" placeholder="Email" />
                     </div>
                     <div class="form-group">
-                        <label for="phone_number">Phone Number</label>
-                        <input type="text" name="phone_number" id="phone_number" class="form-control" required="true"/>
+
+                        <input type="text" name="phone_number" id="phone_number" class="form-control" required="true" placeholder="Phone Number" />
                     </div>
                     <div class="form-group">
-                        <label for="Circle">Circle</label>
-                        <select name="Circle" id="Circle" class="form-control" required="true">
+
+                        <select name="Circle" id="Circle" class="form-control" required="true" placeholder="Company Name">
                             <option value="">Select Circle</option>
                             <option value="option-1">Circle 1</option>
                             <option value="option-2">Circle 2</option>
@@ -157,12 +254,12 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="description">Description</label>
-                        <textarea name="description" id="description" class="form-control" rows="4" required="true"/>
+
+                        <textarea name="description" id="description" class="form-control" rows="4" required="true" placeholder="Description"/>
                     </div>
                     <div class="form-group">
-                        <label for="file">Upload File</label>
-                        <input type="file" name="file" id="file" class="form-control-file" required="true"/>
+
+                        <input type="file" name="file" id="file" class="form-control-file" required="true" placeholder="Upload File"/>
                     </div>
                     <button type="submit" class="btn btn-primary mt-4">Submit</button>
                 </form>
