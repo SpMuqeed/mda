@@ -8,32 +8,41 @@ class ApplicationForm(models.Model):
     _name = 'application.form'
     _description = 'Application Form'
 
-    name = fields.Char(string="Company Name", required=True)
-    contact_name = fields.Char(string="Contact Name", required=True)
-    email = fields.Char(string="Email", required=True)
-    phone_number = fields.Char(string="Phone Number", required=True)
+    name = fields.Char(string="Company Name", required=True, translate=True)
+    contact_name = fields.Char(string="Contact Name", required=True, translate=True)
+    email = fields.Char(string="Email", required=True, translate=True)
+    phone_number = fields.Char(string="Phone Number", required=True, translate=True)
     Circle = fields.Selection(
         [
-            ('option_1', 'Circle 1'),
-            ('option_2', 'Circle 2'),
-            ('option_3', 'Circle 3'),
+            ('option-1', 'Circle 1'),
+            ('option-2', 'Circle 2'),
+            ('option-3', 'Circle 3'),
         ],
         string="Circle",
         required=True,
     )
-    description = fields.Text(string="Description")
-    file_upload = fields.Binary(string="File Upload", attachment=True)
-    file_name = fields.Char(string="File Name")
+    description = fields.Text(string="Description",required=True, translate=True)
+    file_upload = fields.Binary(string="File Upload", attachment=True,required=True, translate=True)
+    file_name = fields.Char(string="File Name",required=True, translate=True)
 
 
 class MdaController(http.Controller):
+    # @http.route('/', auth='public', website=True)
+    # def homepage_view(self, **kwargs):
+    #     return request.render('mda.homepage_template',{})
+    #
+    # @http.route('/contactus', type='http', auth='public', website=True)
+    # def contact_us_form(self, **kwargs):
+    #     return request.render('mda.contact_us_template', {})
     @http.route('/', auth='public', website=True)
     def homepage_view(self, **kwargs):
-        return request.render('mda.homepage_template',{})
+        direction = "rtl" if "/ar/" in request.httprequest.path else "ltr"
+        return request.render('mda.homepage_template', {'direction': direction})
 
     @http.route('/contactus', type='http', auth='public', website=True)
     def contact_us_form(self, **kwargs):
-        return request.render('mda.contact_us_template', {})
+        direction = "rtl" if "/ar/" in request.httprequest.path else "ltr"
+        return request.render('mda.contact_us_template', {'direction': direction})
 
     @http.route('/contactus/submit', type='http', auth='public', website=True, csrf=False, methods=['POST'])
     def contact_us_submit(self, **post):

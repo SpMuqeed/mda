@@ -2,9 +2,25 @@
 <odoo>
     <template id="contact_us_template" name="Contact Us">
         <t t-call="website.layout">
-            <xpath>
+            <xpath expr="//html" position="attributes">
                 <style>
+                    /* Ensure full RTL layout for Arabic */
+                    .o_rtl {
+                    direction: rtl !important;
+                    text-align: right;
+                    }
+                    .o_rtl .o_main_navbar,
+                    .o_rtl .o_control_panel,
+                    .o_rtl .o_form_view,
+                    .o_rtl .o_list_view {
+                    text-align: right;
+                    }
 
+                    /* Ensure left-to-right layout for non-Arabic languages */
+                    .o_ltr {
+                    direction: ltr !important;
+                    text-align: left;
+                    }
                     .form-group {
                     display:flex;
                     flex-direction:row;
@@ -12,7 +28,6 @@
                     }
                     .form-group label {
                     font-weight: bold;
-
                     width:300px;
                     }
                     .form-container {
@@ -100,49 +115,54 @@
                     font-size: 16px;
                     }
                 </style>
+                <attribute name="dir">
+                    <t t-if="request.env.user.lang and request.env.user.lang.startswith('ar')">rtl</t>
+                </attribute>
+                <attribute name="class">
+                    <t t-if="request.env.user.lang and request.env.user.lang.startswith('ar')">o_rtl</t>
+                </attribute>
             </xpath>
             <div>
                 <h2 style="background-color:#034673;color:white;height:150px;display:flex;align-items:center;padding-left:75px ">
                     Contact Us
                 </h2>
             </div>
-
-            <div class="form-container ">
+            <div class="form-container">
                 <h2 class="mb-4">Contact Us</h2>
                 <form action="/contactus/submit" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="csrf_token" value="your_csrf_token_here"/>
                     <div class="form-group">
                         <label for="name">Company Name</label>
-                        <input type="text" name="name" id="name" class="form-control"/>
+                        <input type="text" name="name" id="name" class="form-control" required="true"/>
                     </div>
                     <div class="form-group">
                         <label for="contact_name">Contact Name</label>
-                        <input type="text" name="contact_name" id="contact_name" class="form-control"/>
+                        <input type="text" name="contact_name" id="contact_name" class="form-control" required="true"/>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" class="form-control"/>
+                        <input type="email" name="email" id="email" class="form-control" required="true"/>
                     </div>
                     <div class="form-group">
                         <label for="phone_number">Phone Number</label>
-                        <input type="text" name="phone_number" id="phone_number" class="form-control"/>
+                        <input type="text" name="phone_number" id="phone_number" class="form-control" required="true"/>
                     </div>
                     <div class="form-group">
-                        <label for="dropdown_selection">Circle</label>
-                        <select name="Circle" id="Circle" class="form-control">
+                        <label for="Circle">Circle</label>
+                        <select name="Circle" id="Circle" class="form-control" required="true">
                             <option value="">Select Circle</option>
-                            <option value="option_1">Circle 1</option>
-                            <option value="option_2">Circle 2</option>
-                            <option value="option_3">Circle 3</option>
+                            <option value="option-1">Circle 1</option>
+                            <option value="option-2">Circle 2</option>
+                            <option value="option-3">Circle 3</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="description">Description</label>
-                        <textarea name="description" id="description" class="form-control" rows="4"></textarea>
+                        <textarea name="description" id="description" class="form-control" rows="4" required="true"/>
                     </div>
                     <div class="form-group">
                         <label for="file">Upload File</label>
-                        <input type="file" name="file" id="file" class="form-control-file"/>
+                        <input type="file" name="file" id="file" class="form-control-file" required="true"/>
                     </div>
                     <button type="submit" class="btn btn-primary mt-4">Submit</button>
                 </form>

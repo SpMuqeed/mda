@@ -6,8 +6,25 @@
                     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
                           rel="stylesheet"/>
                 </t>
-                <xpath expr="//main" position="before">
+                <xpath expr="//html" position="attributes">
                     <style>
+                        /* Ensure full RTL layout for Arabic */
+                        .o_rtl {
+                        direction: rtl !important;
+                        text-align: right;
+                        }
+                        .o_rtl .o_main_navbar,
+                        .o_rtl .o_control_panel,
+                        .o_rtl .o_form_view,
+                        .o_rtl .o_list_view {
+                        text-align: right;
+                        }
+                        /* Ensure left-to-right layout for non-Arabic languages */
+                        .o_ltr {
+                        direction: ltr !important;
+                        text-align: left;
+                        }/
+
                         body {
                         font-family: Arial, sans-serif;
                         margin: 0;
@@ -139,47 +156,56 @@
                         height: 12px;
                         }
                         }
-                          .stats-section {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0;
-        justify-content: center;
-        padding: 2rem;
-        background-color: #f9f9f9;
-    }
+                        .stats-section {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0;
+                        justify-content: center;
+                        padding: 2rem;
+                        background-color: #f9f9f9;
+                        }
 
-    .stat-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        background-color: #fff;
-
-
-        padding: 1.5rem;
-        width: calc(25% - 1rem); /* Four cards in a row on large screens */
-        min-width: 150px;
-        max-width: 250px;
-    }
+                        .stat-card {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                        background-color: #fff;
 
 
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .stat-card {
-            width: calc(50% - 1rem); /* Two cards per row on tablets */
-        }
-    }
+                        padding: 1.5rem;
+                        width: calc(25% - 1rem); /* Four cards in a row on large screens */
+                        min-width: 150px;
+                        max-width: 250px;
+                        }
 
-    @media (max-width: 576px) {
-        .stats-section {
-            flex-direction: column;
-        }
-        .stat-card {
-            width: 100%; /* Full width for each card on mobile */
-            max-width: 400px;
-        }
-    }
+
+                        /* Responsive adjustments */
+                        @media (max-width: 768px) {
+                        .stat-card {
+                        width: calc(50% - 1rem); /* Two cards per row on tablets */
+                        }
+                        }
+
+                        @media (max-width: 576px) {
+                        .stats-section {
+                        flex-direction: column;
+                        }
+                        .stat-card {
+                        width: 100%; /* Full width for each card on mobile */
+                        max-width: 400px;
+                        }
+                        }
                     </style>
+                    <attribute name="dir">
+                        <t t-if="request.env.user.lang and request.env.user.lang.startswith('ar')">rtl</t>
+
+                    </attribute>
+                    <attribute name="class">
+                        <t t-if="request.env.user.lang and request.env.user.lang.startswith('ar')">o_rtl</t>
+
+                    </attribute>
+
                 </xpath>
 
                 <div class="">
@@ -269,7 +295,7 @@
                             <div class="col-md-3">
                                 <div class="service-card">
                                     <div class="service-icon">
-                                        <i class="fa fa-anchor"></i>
+                                        <i class="fa fa-anchor"/>
                                     </div>
                                     <h3 class="service-title">BRAND IDENTITY</h3>
                                     <p class="service-description">
@@ -282,7 +308,7 @@
                             <div class="col-md-3">
                                 <div class="service-card">
                                     <div class="service-icon">
-                                        <i class="fa fa-desktop"></i>
+                                        <i class="fa fa-desktop"/>
                                     </div>
                                     <h3 class="service-title">WEB DEVELOPMENT</h3>
                                     <p class="service-description">
@@ -295,7 +321,7 @@
                             <div class="col-md-3">
                                 <div class="service-card">
                                     <div class="service-icon">
-                                        <i class="fa fa-mobile-alt"></i>
+                                        <i class="fa fa-mobile-alt"/>
                                     </div>
                                     <h3 class="service-title">MOBILE APPLICATIONS</h3>
                                     <p class="service-description">
@@ -308,7 +334,7 @@
                             <div class="col-md-3">
                                 <div class="service-card">
                                     <div class="service-icon">
-                                        <i class="fa fa-play"></i>
+                                        <i class="fa fa-play"/>
                                     </div>
                                     <h3 class="service-title">ONLINE MARKETING</h3>
                                     <p class="service-description">
@@ -324,28 +350,28 @@
                 <section class="stats-section">
                     <div class="stat-card">
                         <div class="icon">
-                            <i class="fa-solid fa-folder-open"></i>
+                            <i class="fa-solid fa-folder-open"/>
                         </div>
                         <div class="stat-number">358</div>
                         <div class="stat-label">projects completed</div>
                     </div>
                     <div class="stat-card">
                         <div class="icon">
-                            <i class="fa-solid fa-lightbulb"></i>
+                            <i class="fa-solid fa-lightbulb"/>
                         </div>
                         <div class="stat-number">269</div>
                         <div class="stat-label">concept created</div>
                     </div>
                     <div class="stat-card">
                         <div class="icon">
-                            <i class="fa-solid fa-user"></i>
+                            <i class="fa-solid fa-user"/>
                         </div>
                         <div class="stat-number">157</div>
                         <div class="stat-label">happy clients</div>
                     </div>
                     <div class="stat-card">
                         <div class="icon">
-                            <i class="fa-solid fa-trophy"></i>
+                            <i class="fa-solid fa-trophy"/>
                         </div>
                         <div class="stat-number">23</div>
                         <div class="stat-label">awards winning</div>
