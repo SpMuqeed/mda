@@ -317,77 +317,41 @@
                         opacity: 1 !important;
                         visibility: visible !important;
                         }
-                        /* 🎯 Active carousel indicator (dots) */
-.carousel-indicators .active {
-    background-color: #666666 !important; /* Highlighted color */
-    transform: scale(1.15); /* Enlarge active dot */
-}
 
-/* Default caption styling (Desktop View) */
-.carousel-caption {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: flex-start !important; /* Align content horizontally */
-    align-items: flex-start !important; /* Align text to the top */
-    text-align: start !important;
-    position: absolute;
-    inset: 0; /* Covers entire area */
-    padding: 5%; /* Adds internal spacing */
-    opacity: 0 !important;
-    visibility: hidden !important;
-    transition: opacity 1s ease-in-out 1s, visibility 0s linear 1s !important;
-}
 
-/* Show caption only on active slide */
-.carousel-item.active .carousel-caption {
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-/* 📱 Responsive Design Adjustments */
 
 /* 🖥️ Large screens (Desktops) */
 @media (min-width: 1200px) {
-    .carousel-caption {
-        padding: 5%;
-    }
+.about_image{
+                        width:500px;}
     .carousel-caption h1 {
         font-size: 3rem; /* Large Heading */
     }
     .carousel-caption h5 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 
 
 @media (max-width: 992px) {
-    .carousel-caption {
-        flex-direction: column !important; /* Stack content vertically */
-        align-items: center !important;
-        text-align: center !important;
-        padding: 4%;
-    }
+.about_image{
+                        width:500px;}
     .carousel-caption h1 {
         font-size: 2.5rem; /* Medium Heading */
     }
     .carousel-caption h5 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 }
 
 /* 📱 Mobile Devices */
 @media (max-width: 768px) {
-    .carousel-caption {
-        flex-direction: column !important; /* Stack items */
-        align-items: center !important;
-        text-align: center !important;
-        padding: 3%;
-    }
+
     .carousel-caption h1 {
         font-size: 2rem; /* Smaller Heading */
     }
     .carousel-caption h5 {
-        font-size: 1.1rem;
+        font-size: 1.0rem;
     }
 }
 
@@ -398,20 +362,10 @@
         font-size: 1.5rem; /* Compact Heading */
     }
     .carousel-caption h5 {
-        font-size: 0.95rem; /* Smaller text */
+        font-size: 0.9rem; /* Smaller text */
     }
 }
 
-/* 🎯 Adjustments for carousel indicators on small screens */
-@media (max-width: 576px) {
-    .carousel-indicators {
-        bottom: 5px; /* Moves dots up slightly */
-    }
-    .carousel-indicators li {
-        width: 8px;
-        height: 8px;
-    }
-}
 
                     </style>
                     <attribute name="dir">
@@ -448,11 +402,11 @@
                             <div class="carousel-item animate__animated animate__zoomInDown">
                                 <img src="https://www.mda.services/wp-content/uploads/2017/08/bg1.jpg"
                                      class="d-block w-100 carousel-image" alt="Image 2"/>
-                                <div class="carousel-caption start-0 top-0">
-                                    <div>
+                                <div class="carousel-caption start-0 top-0 row" >
+                                    <div class="col-6" >
                                         <h1>Digital Marketing</h1>
-                                    <h5>Strategies Focused on Increasing The Reach &amp; Visibility of Your</h5>
-                                    <h5>Bussiness.</h5>
+                                    <h5>Strategies Focused on Increasing The Reach &amp; Visibility of Your Bussiness.</h5>
+
                                     </div>
 
                                 </div>
@@ -462,18 +416,16 @@
                             <div class="carousel-item animate__animated animate__lightSpeedInRight">
                                 <img src="https://www.mda.services/wp-content/uploads/2017/08/bg1.jpg"
                                      class="d-block w-100 carousel-image" alt="Image 3"/>
-                                <div class="carousel-caption  start-0 top-0 ">
-                                    <div>
+                                <div class="carousel-caption  start-0 top-0 row">
+                                    <div class="col-8" >
                                         <h1>RICH SOLUTIONS</h1>
                                         <h5>Crafting your apps with a unique user experience tailored to your business
-                                            with
-                                            the right
+                                            with the right blend of technologies guarantees a competitive online presence
                                         </h5>
-                                        <h5>blend of technologies guarantees a competitive online presence</h5>
                                     </div>
-                                    <div style="height:500px">
-                                        <img height="50%" src="https://www.mda.services/beta/wp-content/uploads/2017/08/web-application-development-RIGHT1.png"/>
-                                    </div>
+<!--                                    <div  class="col-6" >-->
+<!--                                        <img height="300px" src="https://www.mda.services/beta/wp-content/uploads/2017/08/web-application-development-RIGHT1.png"/>-->
+<!--                                    </div>-->
                                 </div>
                             </div>
                         </div>
@@ -493,11 +445,11 @@
                 </div>
                 <section class="about-mda-section">
                     <div class="container">
-                        <div class="row align-items-center">
+                        <div class="row align-items-center ">
                             <!-- Image Section -->
-                            <div class="col-md-6">
+                            <div class="col-md-6 about_image p-2">
                                 <img src="https://www.mda.services/wp-content/uploads/2018/04/digital-deisgn-agency.jpg"
-                                     alt="About MDA" class="img-fluid " style=" max-width:600px"/>
+                                     alt="About MDA" class="img-fluid " style=" width:600px"/>
                             </div>
                             <!-- Text Section -->
                             <div class="col-md-6">
