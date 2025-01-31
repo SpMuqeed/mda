@@ -317,54 +317,49 @@
                         opacity: 1 !important;
                         visibility: visible !important;
                         }
-
-
-
-/* 🖥️ Large screens (Desktops) */
-@media (min-width: 1200px) {
-.about_image{
+                        /* 🖥️ Large screens (Desktops) */
+                        @media (min-width: 1200px) {
+                        .about_image{
                         width:500px;}
-    .carousel-caption h1 {
-        font-size: 3rem; /* Large Heading */
-    }
-    .carousel-caption h5 {
-        font-size: 1.2rem;
-    }
-}
-
-
-@media (max-width: 992px) {
-.about_image{
+                        .carousel-caption h1 {
+                        font-size: 3rem; /* Large Heading */
+                        }
+                        .carousel-caption h5 {
+                        font-size: 1.2rem;
+                        }
+                        }
+                        @media (max-width: 992px) {
+                        .about_image{
                         width:500px;}
-    .carousel-caption h1 {
-        font-size: 2.5rem; /* Medium Heading */
-    }
-    .carousel-caption h5 {
-        font-size: 1.2rem;
-    }
-}
+                        .carousel-caption h1 {
+                        font-size: 2.5rem; /* Medium Heading */
+                        }
+                        .carousel-caption h5 {
+                        font-size: 1.2rem;
+                        }
+                        }
+                        /* 📱 Mobile Devices */
+                        @media (max-width: 768px) {
+                        .about_image{
+                        display:none !important;}
+                        .carousel-caption h1 {
+                        font-size: 2rem; /* Smaller Heading */
+                        }
+                        .carousel-caption h5 {
+                        font-size: 1.0rem;
+                        }
+                        }
+                        @media (max-width: 576px) {
+                        .about_image{
+                        display:none !important;}
 
-/* 📱 Mobile Devices */
-@media (max-width: 768px) {
-
-    .carousel-caption h1 {
-        font-size: 2rem; /* Smaller Heading */
-    }
-    .carousel-caption h5 {
-        font-size: 1.0rem;
-    }
-}
-
-
-@media (max-width: 576px) {
-
-    .carousel-caption h1 {
-        font-size: 1.5rem; /* Compact Heading */
-    }
-    .carousel-caption h5 {
-        font-size: 0.9rem; /* Smaller text */
-    }
-}
+                        .carousel-caption h1 {
+                        font-size: 1.5rem; /* Compact Heading */
+                        }
+                        .carousel-caption h5 {
+                        font-size: 0.9rem; /* Smaller text */
+                        }
+                        }
 
 
                     </style>
@@ -402,10 +397,12 @@
                             <div class="carousel-item animate__animated animate__zoomInDown">
                                 <img src="https://www.mda.services/wp-content/uploads/2017/08/bg1.jpg"
                                      class="d-block w-100 carousel-image" alt="Image 2"/>
-                                <div class="carousel-caption start-0 top-0 row" >
-                                    <div class="col-6" >
+                                <div class="carousel-caption start-0 top-0 row">
+                                    <div class="col-6">
                                         <h1>Digital Marketing</h1>
-                                    <h5>Strategies Focused on Increasing The Reach &amp; Visibility of Your Bussiness.</h5>
+                                        <h5>Strategies Focused on Increasing The Reach &amp; Visibility of Your
+                                            Bussiness.
+                                        </h5>
 
                                     </div>
 
@@ -417,15 +414,16 @@
                                 <img src="https://www.mda.services/wp-content/uploads/2017/08/bg1.jpg"
                                      class="d-block w-100 carousel-image" alt="Image 3"/>
                                 <div class="carousel-caption  start-0 top-0 row">
-                                    <div class="col-8" >
+                                    <div class="col-8">
                                         <h1>RICH SOLUTIONS</h1>
                                         <h5>Crafting your apps with a unique user experience tailored to your business
-                                            with the right blend of technologies guarantees a competitive online presence
+                                            with the right blend of technologies guarantees a competitive online
+                                            presence
                                         </h5>
                                     </div>
-<!--                                    <div  class="col-6" >-->
-<!--                                        <img height="300px" src="https://www.mda.services/beta/wp-content/uploads/2017/08/web-application-development-RIGHT1.png"/>-->
-<!--                                    </div>-->
+                                    <!--                                    <div  class="col-6" >-->
+                                    <!--                                        <img height="300px" src="https://www.mda.services/beta/wp-content/uploads/2017/08/web-application-development-RIGHT1.png"/>-->
+                                    <!--                                    </div>-->
                                 </div>
                             </div>
                         </div>
