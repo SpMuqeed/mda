@@ -59,12 +59,13 @@
                         }
                         .read-more {
                         display: inline-block;
-                        font-size: 1rem;
-                        font-weight: bold;
+                        font-size: 1.2rem;
+                        font-weight: 700;
                         color: #034673;
                         text-decoration: none;
-                        border-bottom: 2px solid #0056b3;
+                        border-bottom: 3px solid #0056b3;
                         transition: color 0.3s, border-color 0.3s;
+
                         }
                         .services-section {
                         background-color:white;
@@ -200,6 +201,9 @@
                         .stat-card {
                         width: calc(50% - 1rem); /* Two cards per row on tablets */
                         }
+                        .read-more{
+                        margin-bottom:50px;
+                        }
                         }
 
                         @media (max-width: 576px) {
@@ -213,7 +217,7 @@
                         }
                         @media screen and (max-width: 768px) {
                         .about-title {
-                        font-size: 1.5rem;
+                        font-size: 2rem;
 
                         }
 
@@ -250,34 +254,43 @@
                         }
                         .services-section{
                         margin:0px !important;
+                        padding:0px !important;
+
                         }
                         }
 
                         @media screen and (max-width: 480px) {
                         .about-title {
-                        font-size: 1.3rem;
+                        font-size: 1.8rem;
                         }
 
                         .about-text {
-                        font-size: 0.85rem;
+                        font-size: 1rem;
+                        font-weight:500;
+                        color:black;
                         }
 
                         .service-card {
-                        width: 90%;
-                        margin: 10px auto;
-                        padding: 10px;
+                        height:275px;
+<!--                        width: 90%;-->
+                        margin:  auto;
+                        margin-bottom:25px;
+<!--                        padding: 10px;-->
                         }
 
                         .service-icon {
-                        font-size: 2rem;
+                        font-size: 3.5rem;
                         }
 
                         .service-title {
-                        font-size: 0.9rem;
+                                                margin-top:10px !important;
+                        font-size: 1.2rem;
+                        margin-bottom:10px !important;
                         }
 
                         .service-description {
                         font-size: 0.8rem;
+                        margin-top:20px !important;
                         }
                         }
                         .services-section{
@@ -340,6 +353,12 @@
                         }
                         /* 📱 Mobile Devices */
                         @media (max-width: 768px) {
+                        .body{
+                        padding:15px;
+                        }
+                        .carousel-inner {
+                        height:200px !important;
+                        }
                         .about_image{
                         display:none !important;}
                         .carousel-caption h1 {
@@ -348,16 +367,25 @@
                         .carousel-caption h5 {
                         font-size: 1.0rem;
                         }
+                        .heading{
+                        margin-top:25px;
                         }
+                        .carousel-indicators{
+                        opacity:0;
+                        }
+                        }
+
                         @media (max-width: 576px) {
                         .about_image{
                         display:none !important;}
-
+                          .carousel-inner {
+                        height:200px !important;
+                        }
                         .carousel-caption h1 {
                         font-size: 1.5rem; /* Compact Heading */
                         }
                         .carousel-caption h5 {
-                        font-size: 0.9rem; /* Smaller text */
+                        font-size: 0.6rem; /* Smaller text */
                         }
                         }
 
@@ -398,10 +426,10 @@
                                 <img src="https://www.mda.services/wp-content/uploads/2017/08/bg1.jpg"
                                      class="d-block w-100 carousel-image" alt="Image 2"/>
                                 <div class="carousel-caption start-0 top-0 row">
-                                    <div class="col-6">
-                                        <h1>Digital Marketing</h1>
+                                    <div class=" col-8 col-sm-12">
+                                        <h1>Digital Marketings</h1>
                                         <h5>Strategies Focused on Increasing The Reach &amp; Visibility of Your
-                                            Bussiness.
+                                            Business.
                                         </h5>
 
                                     </div>
@@ -414,7 +442,7 @@
                                 <img src="https://www.mda.services/wp-content/uploads/2017/08/bg1.jpg"
                                      class="d-block w-100 carousel-image" alt="Image 3"/>
                                 <div class="carousel-caption  start-0 top-0 row">
-                                    <div class="col-8">
+                                    <div class="col-8 col-sm-12">
                                         <h1>RICH SOLUTIONS</h1>
                                         <h5>Crafting your apps with a unique user experience tailored to your business
                                             with the right blend of technologies guarantees a competitive online
@@ -441,7 +469,8 @@
                         </button>
                     </div>
                 </div>
-                <section class="about-mda-section">
+               <div class="body">
+                    <section class="about-mda-section">
                     <div class="container">
                         <div class="row align-items-center ">
                             <!-- Image Section -->
@@ -450,7 +479,7 @@
                                      alt="About MDA" class="img-fluid " style=" width:600px"/>
                             </div>
                             <!-- Text Section -->
-                            <div class="col-md-6">
+                            <div class="heading col-md-6">
                                 <h2 class="about-title">ABOUT
                                     <span class="highlight">MDA</span>
                                 </h2>
@@ -459,8 +488,8 @@
                                     digital presence. Whether you are an individual, a business or a government agency,
                                     MDA offers the strategy and tools you need to deliver your clients a superior
                                     lifestyle, a more competitive business, and ready-to-deliver government services.
-                                </p>
-                                <p class="about-text">
+<!--                                </p>-->
+<!--                                <p class="about-text">-->
                                     Living in the era of digital communications means combining the tools of information
                                     technology with current online channels of communications – empowering you to become
                                     stronger, faster, and more competitive. In short, to get ahead of your game.
@@ -475,7 +504,7 @@
                     <div class="container">
                         <div class="row text-center">
                             <!-- Brand Identity -->
-                            <div class="col-md-3">
+                            <div class="col-md-3 ">
                                 <div class="service-card">
                                     <div class="service-icon">
                                         <i class="fa fa-anchor"/>
@@ -560,6 +589,8 @@
                         <div class="stat-label">awards winning</div>
                     </div>
                 </section>
+               </div>
+
 
             </t>
         </template>
