@@ -99,13 +99,18 @@
                         color: #ffffff;
                         margin-bottom: 15px;
                         }
+                        .service-icon img {
+
+                        font-size: 2.5rem;
+                        margin-bottom: 20px;
+                        }
                         .service-title {
                         font-size: 1.2rem;
                         font-weight: bold;
                         margin-bottom: 10px;
                         }
                         .service-description {
-                        font-size: 0.9rem;
+                        font-size: 0.8rem;
                         line-height: 1.6;
                         }
                         .service-card i {
@@ -167,6 +172,23 @@
                         .carousel-image {
                         height: 200px;
                         }
+                        <!--                        .navbar-nav .nav-link {-->
+                        <!--                        color: white !important;-->
+                        <!--                        background-color: #034673 !important;-->
+                        <!--                        }-->
+
+                        <!--                        .navbar-nav .nav-link:hover {-->
+                        <!--                        color: white !important;-->
+                        <!--                        background-color: #034673 !important;-->
+                        <!--                        }-->
+                        <!--                        .offcanvas-header{-->
+                        <!--                         color: white !important;-->
+                        <!--                        background-color: #034673 !important;-->
+                        <!--                        }-->
+                        <!--                          .offcanvas-body  {-->
+                        <!--                        color: white !important;-->
+                        <!--                        background-color: #034673 !important;-->
+                        <!--                        }-->
                         }
                         /* Center indicators and controls for smaller screens */
                         @media (max-width: 768px) {
@@ -272,10 +294,10 @@
 
                         .service-card {
                         height:275px;
-<!--                        width: 90%;-->
-                        margin:  auto;
+                        <!--                        width: 90%;-->
+                        margin: auto;
                         margin-bottom:25px;
-<!--                        padding: 10px;-->
+                        <!--                        padding: 10px;-->
                         }
 
                         .service-icon {
@@ -283,7 +305,7 @@
                         }
 
                         .service-title {
-                                                margin-top:10px !important;
+                        margin-top:10px !important;
                         font-size: 1.2rem;
                         margin-bottom:10px !important;
                         }
@@ -378,7 +400,7 @@
                         @media (max-width: 576px) {
                         .about_image{
                         display:none !important;}
-                          .carousel-inner {
+                        .carousel-inner {
                         height:200px !important;
                         }
                         .carousel-caption h1 {
@@ -388,9 +410,366 @@
                         font-size: 0.6rem; /* Smaller text */
                         }
                         }
+                        .swiper-wrapper {
+                        display: flex;
+                        align-items: center;
+                        }
+
+                        /* Ensure each slide is properly aligned */
+                        .swiper-slide {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        }
+
+                        /* Set image width to fit inside slides */
+                        .swiper-slide img {
+                        max-width: 100%;
+                        height: auto;
+                        max-height: 100px; /* Adjust logo height */
+                        }
+
+                        /* Black navigation buttons */
+                        .swiper-button-prev, .swiper-button-next {
+                        color: black !important;
+                        }
+                        /* Ensure the logo slider section is positioned correctly */
+                        .logo-slider-section {
+                        position: relative !important;
+                        }
+
+                        /* Style for both navigation buttons */
+                        .swiper-button-prev,
+                        .swiper-button-next {
+                        position: absolute !important;
+                        bottom: -50px !important; /* Move buttons below the images */
+                        top: auto !important;
+                        width: 40px !important;
+                        height: 40px !important;
+                        <!--    background-color: white !important; /* Background for better visibility */-->
+                        <!--    border-radius: 50% !important; /* Make them circular */-->
+                        <!--    border: 3px solid black !important; /* Border similar to the design */-->
+                        <!--    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important; /* Soft shadow effect */-->
+                        display: flex !important;
+                        align-items: center !important;
+                        justify-content: center !important;
+                        opacity: 1 !important;
+                        transition: opacity 0.3s ease, background-color 0.3s ease !important;
+                        cursor: pointer !important;
+                        }
+
+                        /* Left button - position it slightly left */
+                        .swiper-button-prev {
+                        left: 45% !important;
+                        }
+
+                        /* Right button - position it slightly right */
+                        .swiper-button-next {
+                        right: 45% !important;
+                        }
+
+                        /* Hover effect for both buttons */
+                        .swiper-button-prev:hover,
+                        .swiper-button-next:hover {
+                        color: #D3D3D3 !important;
+                        opacity: 1 !important;
+                        }
+
+                        /* Custom styling for arrows */
+                        .swiper-button-prev::after,
+                        .swiper-button-next::after {
+                        font-size: 20px !important; /* Adjust arrow size */
+                        font-weight: 900 !important;
+                        }
+
+
+                        @media (max-width: 768px) {
+                        /* Ensure the wrapper and slides are aligned correctly */
+                        .swiper-wrapper {
+                        display: flex !important;
+                        align-items: center !important;
+                        }
+
+                        .swiper-slide {
+                        display: flex !important;
+                        justify-content: center !important;
+                        align-items: center !important;
+                        }
+
+                        /* Set image width and height to fit on mobile */
+
+
+                        /* Adjust the navigation buttons for mobile */
+                        .swiper-button-prev,
+                        .swiper-button-next {
+                        width: 35px !important;
+                        height: 35px !important;
+                        bottom: -25px !important; /* Adjust distance from logos */
+                        }
+
+                        /* Adjust positions for better spacing on smaller screens */
+                        .swiper-button-prev {
+                        left: 45% !important;
+                        }
+
+                        .swiper-button-next {
+                        right: 45% !important;
+                        }
+
+                        /* Custom styling for smaller arrows */
+                        .swiper-button-prev::after,
+                        .swiper-button-next::after {
+                        font-size: 16px !important;
+                        display:none !important;
+                        }
+                        }
+
+                        @media (max-width: 480px) {
+                        /* Further reduce logo size on very small screens */
+
+
+                        /* Adjust navigation buttons for extra small screens */
+                        .swiper-button-prev,
+                        .swiper-button-next {
+                        width: 30px !important;
+                        height: 30px !important;
+                        bottom: -40px !important;
+                        }
+
+                        .swiper-button-prev {
+                        left: 35% !important;
+                        }
+
+                        .swiper-button-next {
+                        right: 35% !important;
+                        }
+
+                        /* Reduce arrow size further */
+                        .swiper-button-prev::after,
+                        .swiper-button-next::after {
+                        font-size: 14px !important;
+                        display:none !important;
+                        }
+                        }
+
+
+                        <!--FOOTER RELATED CSS-->
+
+
+                        .footer {
+                        background-image: url("https://www.mda.services/wp-content/uploads/2017/08/hero3.jpg");
+                        color: white;
+                        padding-top: 40px ;
+                        text-align: center;
+                        }
+                        .footer_desc{
+                        margin-right:250px;
+                        margin-left:250px;
+                        margin-top: 30px;
+
+                        }
+                        .footer .cta {
+                        margin-top: 60px;
+                        margin-bottom: 60px;
+                        }
+
+                        .footer .cta h4 {
+                        font-size: 24px;
+                        margin-bottom: 10px;
+                        font-weight:600;
+                        letter-spacing:2px;
+                        }
+
+                        .footer .cta p {
+                        font-size: 16px;
+                        margin-bottom: 20px;
+                        }
+
+                        .footer .cta button {
+                        background-color: #034673;
+                        color: white;
+                        margin-top:20px;
+                        padding: 16px 24px;
+                        border: none;
+                        font-size: 16px;
+                        font-weight:600;
+                        cursor: pointer;
+                        }
+
+                        .footer .cta button:hover {
+                        background-color: white;
+                        color:#034673;
+                        }
+
+
+                        .footer .info {
+                        display: flex;
+                        background-color: #034673;
+                        justify-content: space-between;
+                        gap: 40px;
+                        flex-wrap: wrap;
+
+                        }
+                        .info_container{
+                        padding-top:100px;
+                        padding-bottom:100px;
+                        padding-left:150px;
+                        padding-right:150px;
+                        background-color: #034673;
+                        }
+
+                        .footer .info div {
+                        max-width: 300px;
+                        text-align: left;
+                        }
+
+                        .footer .info div h3 {
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                        }
+
+                        .footer .info div p {
+                        font-size: 14px;
+                        line-height: 1.6;
+                        }
+
+                        .footer .icon {
+                        font-size: 22px;
+                        margin-right: 10px;
+                        }
+                        .copyright{
+                        display:flex;
+                        align-items:center;
+                        padding-left:200px;
+                        height:60px;
+                        background-color:#0296c7;
+                        color:white;
+                        }
+
+                        @media (max-width: 768px) {
+                        .footer {
+                        background-size: cover;
+                        padding-top: 20px;
+                        }
+
+                        .footer_desc {
+                        margin-left: 20px;
+                        margin-right: 20px;
+                        }
+
+                        .footer .cta {
+                        margin-top: 30px;
+                        margin-bottom: 30px;
+                        padding: 0 20px;
+                        }
+
+                        .footer .cta h4 {
+                        font-size: 20px;
+                        letter-spacing: 1.5px;
+                        }
+
+                        .footer .cta p {
+                        font-size: 14px;
+                        }
+
+                        .footer .cta button {
+                        padding: 12px 20px;
+                        font-size: 14px;
+                        width: 100%;
+                        }
+
+                        .footer .info {
+                        flex-direction: column;
+                        align-items: start;
+                        gap: 20px;
+                        text-align: start;
+                        padding: 30px 20px;
+                        gap:10px;
+                        }
+
+                        .info_container {
+                        padding: 40px 20px;
+                        }
+
+                        .footer .info div {
+                        max-width: 100%;
+                        text-align: start;
+                        gap:5px;
+                        }
+
+                        .footer .info div h3 {
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                        }
+
+                        .footer .info div p {
+                        font-size: 13px;
+                        }
+
+                        .footer .icon {
+                        font-size: 20px;
+                        margin-right: 0;
+                        display: block;
+                        margin-bottom: 5px;
+                        }
+
+                        .copyright {
+                        padding-left: 20px;
+                        text-align: center;
+                        justify-content: center;
+                        height: 50px;
+
+                        }
+                        .copyright h6{
+                        font-size:12px !important;
+                        }
+                        .footer .info {
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                        }
+                        }
+                        .footer-logo {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 20px;
+                        }
+
+                        .foot-logo {
+                        width: 200px; /* Adjust as needed */
+                        height: auto;
+                        filter: brightness(0) invert(1);
+                        }
+                        }
 
 
                     </style>
+                    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                        var swiper = new Swiper(".logoSwiper", {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                        loop: true,
+                        autoplay: {
+                        delay: 3000, // 5 seconds auto swipe
+                        disableOnInteraction: false, // Keeps autoplay active even after user interaction
+                        },
+                        navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                        },
+                        breakpoints: {
+                        320: { slidesPerView: 2 },
+                        768: { slidesPerView: 2 },
+                        1024: { slidesPerView: 4 }
+                        }
+                        });
+                        });
+                    </script>
+
                     <attribute name="dir">
                         <t t-if="request.env.user.lang and request.env.user.lang.startswith('ar')">rtl</t>
                     </attribute>
@@ -469,128 +848,250 @@
                         </button>
                     </div>
                 </div>
-               <div class="body">
+                <div class="body">
                     <section class="about-mda-section">
-                    <div class="container">
-                        <div class="row align-items-center ">
-                            <!-- Image Section -->
-                            <div class="col-md-6 about_image p-2">
-                                <img src="https://www.mda.services/wp-content/uploads/2018/04/digital-deisgn-agency.jpg"
-                                     alt="About MDA" class="img-fluid " style=" width:600px"/>
-                            </div>
-                            <!-- Text Section -->
-                            <div class="heading col-md-6">
-                                <h2 class="about-title">ABOUT
-                                    <span class="highlight">MDA</span>
-                                </h2>
-                                <p class="about-text">
-                                    Modern Digital Applications is a company that wants to help you redefine your
-                                    digital presence. Whether you are an individual, a business or a government agency,
-                                    MDA offers the strategy and tools you need to deliver your clients a superior
-                                    lifestyle, a more competitive business, and ready-to-deliver government services.
-<!--                                </p>-->
-<!--                                <p class="about-text">-->
-                                    Living in the era of digital communications means combining the tools of information
-                                    technology with current online channels of communications – empowering you to become
-                                    stronger, faster, and more competitive. In short, to get ahead of your game.
-                                </p>
-                                <a href="#" class="read-more" style="text-decoration:none;">READ MORE</a>
+                        <div class="container">
+                            <div class="row align-items-center ">
+                                <!-- Image Section -->
+                                <div class="col-md-6 about_image px-2">
+                                    <img src="https://www.mda.services/wp-content/uploads/2018/04/digital-deisgn-agency.jpg"
+                                         alt="About MDA" class="img-fluid " style=" width:600px"/>
+                                </div>
+                                <!-- Text Section -->
+                                <div class="heading col-md-6 mt-4">
+                                    <h2 class="about-title">ABOUT
+                                        <span class="highlight">MDA</span>
+                                    </h2>
+                                    <p class="about-text">
+                                        Modern Digital Applications is a company that wants to help you redefine your
+                                        digital presence. Whether you are an individual, a business or a government
+                                        agency,
+                                        MDA offers the strategy and tools you need to deliver your clients a superior
+                                        lifestyle, a more competitive business, and ready-to-deliver government
+                                        services.
+                                        <!--                                </p>-->
+                                        <!--                                <p class="about-text">-->
+                                        Living in the era of digital communications means combining the tools of
+                                        information
+                                        technology with current online channels of communications – empowering you to
+                                        become
+                                        stronger, faster, and more competitive. In short, to get ahead of your game.
+                                    </p>
+                                    <a href="#" class="read-more" style="text-decoration:none;">READ MORE</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-                <section class="services-section ">
-                    <div class="container">
-                        <div class="row text-center">
-                            <!-- Brand Identity -->
-                            <div class="col-md-3 ">
-                                <div class="service-card">
-                                    <div class="service-icon">
-                                        <i class="fa fa-anchor"/>
+                    <section class="services-section ">
+                        <div class="container">
+                            <div class="row text-center">
+                                <!-- Brand Identity -->
+                                <div class="col-md-3 ">
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <img src="https://www.mda.services/wp-content/uploads/2021/04/icon1.png"
+                                                 alt="Image"/>
+                                        </div>
+                                        <h3 class="service-title">BRAND IDENTITY</h3>
+                                        <p class="service-description">
+                                            We’ll help you adapt your brand identity for the digital world -- helping
+                                            you
+                                            improve your logo and the story behind it.
+                                        </p>
                                     </div>
-                                    <h3 class="service-title">BRAND IDENTITY</h3>
-                                    <p class="service-description">
-                                        We’ll help you adapt your brand identity for the digital world -- helping you
-                                        improve your logo and the story behind it.
-                                    </p>
                                 </div>
-                            </div>
-                            <!-- Web Development -->
-                            <div class="col-md-3">
-                                <div class="service-card">
-                                    <div class="service-icon">
-                                        <i class="fa fa-desktop"/>
+                                <!-- Web Development -->
+                                <div class="col-md-3">
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <img src="https://www.mda.services/wp-content/uploads/2021/04/icon2.png"
+                                                 alt="Image"/>
+                                        </div>
+                                        <h3 class="service-title">WEB DEVELOPMENT</h3>
+                                        <p class="service-description">
+                                            We develop websites from scratch -- tailored to fit our client's needs,
+                                            including content and multi-language if needed.
+                                        </p>
                                     </div>
-                                    <h3 class="service-title">WEB DEVELOPMENT</h3>
-                                    <p class="service-description">
-                                        We develop websites from scratch -- tailored to fit our client's needs,
-                                        including content and multi-language if needed.
-                                    </p>
                                 </div>
-                            </div>
-                            <!-- Mobile Applications -->
-                            <div class="col-md-3">
-                                <div class="service-card">
-                                    <div class="service-icon">
-                                        <i class="fa fa-mobile-alt"/>
+                                <!-- Mobile Applications -->
+                                <div class="col-md-3">
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <img src="https://www.mda.services/wp-content/uploads/2021/04/icon3.png"
+                                                 alt="Image"/>
+                                        </div>
+                                        <h3 class="service-title">MOBILE APPLICATIONS</h3>
+                                        <p class="service-description">
+                                            We enrich your digital experience with powerful iPhone and Android
+                                            applications
+                                            to maximize your sales – putting you just a fingertip away.
+                                        </p>
                                     </div>
-                                    <h3 class="service-title">MOBILE APPLICATIONS</h3>
-                                    <p class="service-description">
-                                        We enrich your digital experience with powerful iPhone and Android applications
-                                        to maximize your sales – putting you just a fingertip away.
-                                    </p>
                                 </div>
-                            </div>
-                            <!-- Online Marketing -->
-                            <div class="col-md-3">
-                                <div class="service-card">
-                                    <div class="service-icon">
-                                        <i class="fa fa-play"/>
+                                <!-- Online Marketing -->
+                                <div class="col-md-3">
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <img src="https://www.mda.services/wp-content/uploads/2021/04/icon4.png"
+                                                 alt="Image"/>
+                                        </div>
+                                        <h3 class="service-title">ONLINE MARKETING</h3>
+                                        <p class="service-description">
+                                            We will make more customers fall for you with our well-planned and
+                                            strategized
+                                            online marketing solutions.
+                                        </p>
                                     </div>
-                                    <h3 class="service-title">ONLINE MARKETING</h3>
-                                    <p class="service-description">
-                                        We will make more customers fall for you with our well-planned and strategized
-                                        online marketing solutions.
-                                    </p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-                <section class="stats-section">
-                    <div class="stat-card">
-                        <div class="icon">
-                            <i class="fa-solid fa-folder-open"/>
+                    <section class="stats-section">
+                        <div class="stat-card">
+                            <div class="icon">
+                                <i class="fa-solid fa-folder-open"/>
+                            </div>
+                            <div class="stat-number">358</div>
+                            <div class="stat-label">projects completed</div>
                         </div>
-                        <div class="stat-number">358</div>
-                        <div class="stat-label">projects completed</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="icon">
-                            <i class="fa-solid fa-lightbulb"/>
+                        <div class="stat-card">
+                            <div class="icon">
+                                <i class="fa-solid fa-lightbulb"/>
+                            </div>
+                            <div class="stat-number">269</div>
+                            <div class="stat-label">concept created</div>
                         </div>
-                        <div class="stat-number">269</div>
-                        <div class="stat-label">concept created</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="icon">
-                            <i class="fa-solid fa-user"/>
+                        <div class="stat-card">
+                            <div class="icon">
+                                <i class="fa-solid fa-user"/>
+                            </div>
+                            <div class="stat-number">157</div>
+                            <div class="stat-label">happy clients</div>
                         </div>
-                        <div class="stat-number">157</div>
-                        <div class="stat-label">happy clients</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="icon">
-                            <i class="fa-solid fa-trophy"/>
+                        <div class="stat-card">
+                            <div class="icon">
+                                <i class="fa-solid fa-trophy"/>
+                            </div>
+                            <div class="stat-number">23</div>
+                            <div class="stat-label">awards winning</div>
                         </div>
-                        <div class="stat-number">23</div>
-                        <div class="stat-label">awards winning</div>
-                    </div>
-                </section>
-               </div>
+                    </section>
 
+                    <!-- Logo Carousel Section -->
+                    <section class="logo-slider-section py-5 mb-lg-5">
+                        <div class="container">
+                            <div class="swiper logoSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="http://www.mda.services/wp-content/uploads/2017/08/8.jpg"
+                                             class="d-block mx-auto img-fluid" alt="MG Logo"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="http://www.mda.services/wp-content/uploads/2017/08/3.jpg"
+                                             class="d-block mx-auto img-fluid" alt="Adex Compound Logo"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="http://www.mda.services/wp-content/uploads/2017/08/5-e1505215697914.jpg"
+                                             class="d-block mx-auto img-fluid" alt="WMC Logo"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="http://www.mda.services/wp-content/uploads/2017/08/4.jpg"
+                                             class="d-block mx-auto img-fluid" alt="Taj Al Aroos Logo"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="http://www.mda.services/wp-content/uploads/2017/08/7.jpg"
+                                             class="d-block mx-auto img-fluid" alt="Taj Al Aroos Logo"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="http://www.mda.services/wp-content/uploads/2017/08/6.jpg"
+                                             class="d-block mx-auto img-fluid" alt="Taj Al Aroos Logo"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="http://www.mda.services/wp-content/uploads/2017/08/2-1.jpg"
+                                             class="d-block mx-auto img-fluid" alt="Taj Al Aroos Logo"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="http://www.mda.services/wp-content/uploads/2017/08/logo1.jpg"
+                                             class="d-block mx-auto img-fluid" alt="Taj Al Aroos Logo"/>
+                                    </div>
+                                </div>
+                                <!-- Navigation Buttons -->
+
+                            </div>
+                            <div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <footer class="footer">
+                    <div class="cta">
+                        <h4>DO YOU LIKE WHAT YOU SEE ?</h4>
+                        <p class="footer_desc  d-flex justify-content-center ">It is easy to make promises before a sale
+                            but following up and ensuring a great customer experience is what makes some organizations
+                            stand out. We are proud to be right up there when it comes to exceptional customer
+                            experiences.
+                        </p>
+                        <button>CONTACT US TODAY</button>
+                    </div>
+                    <div class="info_container">
+                        <div style=" border-bottom:1px solid white; ">
+                            <div class="info d-flex flex-sm-row">
+                                <div class="d-flex flex-cols">
+                                    <div>
+                                        <img class="icon"
+                                             src="https://www.mda.services/wp-content/uploads/2021/04/icon5.png"
+                                             alt="Image"/>
+                                    </div>
+                                    <div>
+                                        <h3>ADDRESS</h3>
+                                        <p>Al Arooba St - Woroond 4128, Riyadh 12252 - 6691, Kingdom of Saudi Arabia</p>
+                                    </div>
+
+                                </div>
+                                <div class="d-flex flex-cols">
+                                    <div>
+                                        <img class="icon"
+                                             src="https://www.mda.services/wp-content/uploads/2021/04/icon7.png"
+                                             alt="Image"/>
+                                    </div>
+                                    <div>
+                                        <h3>E-MAIL</h3>
+                                        <p>info@mda.services</p>
+                                    </div>
+
+                                </div>
+                                <div class="d-flex flex-cols">
+                                    <div>
+                                        <img class="icon"
+                                             src="https://www.mda.services/wp-content/uploads/2021/04/icon8.png"
+                                             alt="Image"/>
+                                    </div>
+                                    <div>
+                                        <h3>Working Hours</h3>
+                                        <p>Sun-Thu: 9 AM to 5 PM</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-logo">
+                            <img class="foot-logo"
+                                 src="http://www.mda.services/wp-content/uploads/2017/08/logo-mda-e1504009879650.png"
+                                 alt="MDA Services Logo"/>
+                        </div>
+
+                    </div>
+
+                </footer>
+                <div class="copyright">
+                    <h6>Copyright © 2021, Modern Digital Applications (MDA)</h6>
+                </div>
 
             </t>
         </template>

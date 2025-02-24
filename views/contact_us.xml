@@ -118,6 +118,197 @@
                     }
                     }
 
+                    <!--                    FOOTER RELATED CSS-->
+
+
+                    .footer {
+                    background-image: url("https://www.mda.services/wp-content/uploads/2017/08/hero3.jpg");
+                    color: white;
+                    padding-top: 40px ;
+                    text-align: center;
+                    }
+                    .footer_desc{
+                    margin-right:250px;
+                    margin-left:250px;
+                    margin-top: 30px;
+
+                    }
+                    .footer .cta {
+                    margin-top: 60px;
+                    margin-bottom: 60px;
+                    }
+
+                    .footer .cta h4 {
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                    font-weight:600;
+                    letter-spacing:2px;
+                    }
+
+                    .footer .cta p {
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                    }
+
+                    .footer .cta button {
+                    background-color: #034673;
+                    color: white;
+                    margin-top:20px;
+                    padding: 16px 24px;
+                    border: none;
+                    font-size: 16px;
+                    font-weight:600;
+                    cursor: pointer;
+                    }
+
+                    .footer .cta button:hover {
+                    background-color: white;
+                    color:#034673;
+                    }
+
+
+                    .footer .info {
+                    display: flex;
+                    background-color: #034673;
+                    justify-content: space-between;
+                    gap: 40px;
+                    flex-wrap: wrap;
+
+                    }
+                    .info_container{
+                    padding-top:100px;
+                    padding-bottom:100px;
+                    padding-left:150px;
+                    padding-right:150px;
+                    background-color: #034673;
+                    }
+
+                    .footer .info div {
+                    max-width: 300px;
+                    text-align: left;
+                    }
+
+                    .footer .info div h3 {
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                    }
+
+                    .footer .info div p {
+                    font-size: 14px;
+                    line-height: 1.6;
+                    }
+
+                    .footer .icon {
+                    font-size: 22px;
+                    margin-right: 10px;
+                    }
+                    .copyright{
+                    display:flex;
+                    align-items:center;
+                    padding-left:200px;
+                    height:60px;
+                    background-color:#0296c7;
+                    color:white;
+                    }
+
+                    @media (max-width: 768px) {
+                    .footer {
+                    background-size: cover;
+                    padding-top: 20px;
+                    }
+
+                    .footer_desc {
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    }
+
+                    .footer .cta {
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    padding: 0 20px;
+                    }
+
+                    .footer .cta h4 {
+                    font-size: 20px;
+                    letter-spacing: 1.5px;
+                    }
+
+                    .footer .cta p {
+                    font-size: 14px;
+                    }
+
+                    .footer .cta button {
+                    padding: 12px 20px;
+                    font-size: 14px;
+                    width: 100%;
+                    }
+
+                    .footer .info {
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 20px;
+                    text-align: start;
+                    padding: 30px 20px;
+                    gap:10px;
+                    }
+
+                    .info_container {
+                    padding: 40px 20px;
+                    }
+
+                    .footer .info div {
+                    max-width: 100%;
+                    text-align: start;
+                    gap:5px;
+                    }
+
+                    .footer .info div h3 {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    }
+
+                    .footer .info div p {
+                    font-size: 13px;
+                    }
+
+                    .footer .icon {
+                    font-size: 20px;
+                    margin-right: 0;
+                    display: block;
+                    margin-bottom: 5px;
+                    }
+
+                    .copyright {
+                    padding-left: 20px;
+                    text-align: center;
+                    justify-content: center;
+                    height: 50px;
+
+                    }
+                    .copyright h6{
+                    font-size:12px !important;
+                    }
+                    .footer .info {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    }
+                    }
+                    .footer-logo {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 20px;
+                    }
+
+                    .foot-logo {
+                    width: 200px; /* Adjust as needed */
+                    height: auto;
+                    filter: brightness(0) invert(1);
+                    }
+                    }
+
+
                 </style>
                 <attribute name="dir">
                     <t t-if="request.env.user.lang and request.env.user.lang.startswith('ar')">rtl</t>
@@ -177,6 +368,69 @@
                     </div>
                     <button type="submit" class="btn btn-primary mt-4">Submit</button>
                 </form>
+            </div>
+            <footer class="footer">
+                <div class="cta">
+                    <h4>DO YOU LIKE WHAT YOU SEE ?</h4>
+                    <p class="footer_desc  d-flex justify-content-center ">It is easy to make promises before a sale
+                        but following up and ensuring a great customer experience is what makes some organizations
+                        stand out. We are proud to be right up there when it comes to exceptional customer
+                        experiences.
+                    </p>
+                    <button>CONTACT US TODAY</button>
+                </div>
+                <div class="info_container">
+                    <div style=" border-bottom:1px solid white; ">
+                        <div class="info d-flex flex-sm-row">
+                            <div class="d-flex flex-cols">
+                                <div>
+                                    <img class="icon"
+                                         src="https://www.mda.services/wp-content/uploads/2021/04/icon5.png"
+                                         alt="Image"/>
+                                </div>
+                                <div>
+                                    <h3>ADDRESS</h3>
+                                    <p>Al Arooba St - Woroond 4128, Riyadh 12252 - 6691, Kingdom of Saudi Arabia</p>
+                                </div>
+
+                            </div>
+                            <div class="d-flex flex-cols">
+                                <div>
+                                    <img class="icon"
+                                         src="https://www.mda.services/wp-content/uploads/2021/04/icon7.png"
+                                         alt="Image"/>
+                                </div>
+                                <div>
+                                    <h3>E-MAIL</h3>
+                                    <p>info@mda.services</p>
+                                </div>
+
+                            </div>
+                            <div class="d-flex flex-cols">
+                                <div>
+                                    <img class="icon"
+                                         src="https://www.mda.services/wp-content/uploads/2021/04/icon8.png"
+                                         alt="Image"/>
+                                </div>
+                                <div>
+                                    <h3>Working Hours</h3>
+                                    <p>Sun-Thu: 9 AM to 5 PM</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-logo">
+                        <img class="foot-logo"
+                             src="http://www.mda.services/wp-content/uploads/2017/08/logo-mda-e1504009879650.png"
+                             alt="MDA Services Logo"/>
+                    </div>
+
+                </div>
+
+            </footer>
+            <div class="copyright">
+                <h6>Copyright © 2021, Modern Digital Applications (MDA)</h6>
             </div>
         </t>
     </template>
